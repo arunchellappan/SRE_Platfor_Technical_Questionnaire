@@ -1,1 +1,5 @@
 # SRE_Platform_Technical_Questionnaire
+Implement a circuit Breaker
+You are tasked with writing a library that implements the circuit breaker pattern to make HTTP clients more resilient to failure, e.g. 500 error or timeouts.
+Please implement a small library that wraps and invokes an HTTP client; the HTTP client can be mocked out for this implementation. The library should take in 2 inputs: a time window (in seconds) and an error threshold. If the number of errors from the wrapped HTTP client exceeds the error threshold, the library should prematurely return an error, e.g. “CircuitOpenError”. Whenever the number of errors falls below the threshold, the circuit should be closed and requests should flow freely.
+You may think to implement error-counting with a simple scalar. Doing so would be a good first iteration. If you have the time, we’d like you to implement a rolling window with an appropriate backing data structure. The backing data structure used to bookkeep failures within a time window is crucial to an efficient solution. However, your solution does not need to be optimal. Please demonstrate a working solution with a test case or by printing to stdout.
