@@ -1,1 +1,1 @@
-# SRE_Platfor_Technical_Questionnaire
+# SRE_Platform_Technical_Questionnaire
